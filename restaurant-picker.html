@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What Should We Eat?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Instrument+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="page-wrapper">
+
+    <header class="header">
+      <div class="header-badge">✦ The Hunger Resolver ✦</div>
+      <h1>What should<br />we <em>eat?</em></h1>
+      <p>Add your favourite restaurants and let<br />the universe make the hard call.</p>
+    </header>
+
+    <div class="card">
+      <div class="card-label">
+        Add restaurants
+        <span id="countBadge" class="count-badge" style="display:none">0</span>
+      </div>
+      <div class="input-row">
+        <input type="text" id="restaurantInput" placeholder="e.g. Trattoria Roma…" maxlength="60" autocomplete="off" />
+        <button class="btn-add" onclick="addRestaurant()">+ Add</button>
+      </div>
+      <div class="list-wrapper" id="listWrapper">
+        <div class="empty-state" id="emptyState">
+          <span class="empty-icon">🍽️</span>
+          Add at least two restaurants<br />to get started
+        </div>
+        <div class="restaurant-list" id="restaurantList"></div>
+      </div>
+    </div>
+
+    <div class="pick-section">
+      <button class="btn-pick" id="pickBtn" onclick="pickRandom()" disabled>
+        Decide for me
+      </button>
+      <p class="hint-text" id="hintText">Add 2+ restaurants to unlock</p>
+    </div>
+
+    <div id="resultBanner" style="display:none; margin-top:1.75rem;"></div>
+
+    <footer class="footer">Made with indecision &amp; appetite</footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
